@@ -1,35 +1,12 @@
-# --- Web framework & server ---
-fastapi==0.112.0
-uvicorn[standard]==0.30.6
-python-multipart==0.0.9
-pydantic==2.8.2
-pydantic-settings==2.4.0
-
-# --- Auth & security ---
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-
-# --- HTTP client (external AI API calls) ---
-httpx==0.27.0
-
-# --- AI / ML: Stable Diffusion pipeline ---
-# NOTE: torch is pinned to a CUDA-enabled build via --extra-index-url below.
-# If running CPU-only (e.g. local dev without a GPU), remove --extra-index-url
-# and pip will fall back to the CPU wheel automatically.
-torch==2.4.0
-torchvision==0.19.0
-diffusers==0.30.0
-transformers==4.44.0
-accelerate==0.33.0
-safetensors==0.4.4
-
-# --- Cloud storage ---
-boto3==1.34.162
-cloudinary==1.41.0
-
-# --- Database (if/when persistence is added) ---
-sqlalchemy==2.0.32
-asyncpg==0.29.0
-
-# --- Utilities ---
-python-dotenv==1.0.1
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+python-multipart>=0.0.6
+requests>=2.31.0
+torch>=2.2.0
+torchvision>=0.17.0
+diffusers>=0.25.0
+transformers>=4.37.0
+accelerate>=0.27.0
+safetensors>=0.4.0
+pillow>=10.0.0
