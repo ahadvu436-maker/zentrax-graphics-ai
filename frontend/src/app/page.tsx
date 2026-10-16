@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import GeneratorForm, { GenerationResult } from "@/components/GeneratorForm";
+import GeneratorForm from '../components/GeneratorForm';
 
 export default function GeneratorPage() {
   const [result, setResult] = useState<GenerationResult | null>(null);
