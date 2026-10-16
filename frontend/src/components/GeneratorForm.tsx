@@ -27,7 +27,7 @@ export function GeneratorForm() {
       }
 
       const data = await response.json();
-      setResult(data.result || data.message || "Successfully Generated!");
+      setResult(data.result || data.message || "Successfully Generated Luxury Asset!");
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
     } finally {
@@ -36,28 +36,28 @@ export function GeneratorForm() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-2xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
-            Prompt / Design Idea
+          <label className="block text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">
+            AI Assistant & Luxury Studio Prompt
           </label>
           <textarea
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             required
             rows={4}
-            className="w-full p-4 bg-black/60 border border-white/10 rounded-2xl text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all resize-none shadow-inner text-sm"
-            placeholder="Describe your luxury concept or asset..."
+            className="w-full p-4 bg-black/70 border border-white/10 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all resize-none shadow-inner text-sm"
+            placeholder="Type your design concept, command or chat with AI studio..."
           />
         </div>
 
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full py-4 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-gray-950 font-black uppercase tracking-wider rounded-2xl shadow-xl shadow-amber-500/10 transition-all duration-300 disabled:opacity-50 cursor-pointer transform hover:-translate-y-0.5"
+          className="w-full py-4 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 text-gray-950 font-black uppercase tracking-wider rounded-2xl shadow-xl shadow-amber-500/10 transition-all duration-300 disabled:opacity-50 cursor-pointer transform hover:-translate-y-0.5"
         >
-          {isLoading ? "Generating Luxury Asset..." : "Generate with AI"}
+          {isLoading ? "Processing Elite Request..." : "Send to AI Studio"}
         </button>
       </form>
 
@@ -68,9 +68,9 @@ export function GeneratorForm() {
       )}
 
       {result && (
-        <div className="mt-6 p-6 bg-black/80 border border-amber-500/20 rounded-2xl shadow-2xl backdrop-blur-xl">
+        <div className="mt-6 p-6 bg-black/90 border border-amber-500/30 rounded-2xl shadow-2xl backdrop-blur-xl">
           <h2 className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3 flex items-center justify-between">
-            <span>Generation Output</span>
+            <span>Studio Response & Output</span>
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
           </h2>
           <p className="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed">{result}</p>
