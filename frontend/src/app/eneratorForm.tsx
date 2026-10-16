@@ -7,7 +7,7 @@ import GeneratorForm, {
 } from "@/components/GeneratorForm";
 
 export default function GeneratorPage() {
-  const [result, setResult] = useState < GenerationResult | null > (null);
+ const [result, setResult] = useState<GenerationResult | null>(null);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   
