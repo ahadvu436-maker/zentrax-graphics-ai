@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "formidable"; // প্রয়োজন নেই, তাই বাদ দিতে পারেন
-import React from "react";
+import React, { useState } from "react";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
