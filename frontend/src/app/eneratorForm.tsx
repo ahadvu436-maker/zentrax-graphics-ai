@@ -1,15 +1,8 @@
-"use client";
-"use client";
+""use client";
 
 import { useState } from "react";
 import Image from "next/image";
-import GeneratorForm from "@/components/GeneratorForm";
-
 import GeneratorForm, { GenerationResult } from "@/components/GeneratorForm";
-  success: boolean;
-  imageUrl?: string;
-  message?: string;
-}
 
 export default function GeneratorPage() {
   const [result, setResult] = useState<GenerationResult | null>(null);
