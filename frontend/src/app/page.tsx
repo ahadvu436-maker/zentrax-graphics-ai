@@ -1,4 +1,4 @@
-"import "./globals.css";
+import "./globals.css";
 import { Navbar } from "../components/Navbar";
 import { GeneratorForm } from "../components/GeneratorForm";
 
