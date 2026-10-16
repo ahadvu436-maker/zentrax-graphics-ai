@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import GeneratorForm from "@/components/GeneratorForm";
 
-export interface GenerationResult {
+import GeneratorForm, { GenerationResult } from "@/components/GeneratorForm";
   success: boolean;
   imageUrl?: string;
   message?: string;
